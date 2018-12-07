@@ -1,0 +1,136 @@
+@import '~@nebular/theme/styles/core/functions';
+@import '~@nebular/theme/styles/core/mixins';
+
+$theme: (
+  layout-bg: rgba(30, 30, 30, 1),
+  //
+  separator: layout-bg,
+  //
+  border-color: layout-bg,
+  //
+  shadow: 0 0 20px 0 rgba(0, 0, 0, 1),
+  //
+  color-bg: rgba(50, 50, 50, 1),
+  color-bg-active: rgba(255, 255, 255, 0.098),
+  color-fg: rgba(255, 255, 255, 0.847),
+  color-fg-heading: rgba(255, 255, 255, 1),
+  color-fg-text: rgba(255, 255, 255, 0.549),
+  color-fg-highlight: rgba(180, 180, 180, 1),
+  //
+  color-primary: rgba(191, 90, 242, 1),
+  color-success: rgba(50, 215, 75, 1),
+  color-info: rgba(10, 132, 255, 1),
+  color-warning:rgba(255, 159, 10, 1),
+  color-danger: rgba(255, 69, 58, 1),
+  //
+  link-color: rgba(65, 156, 255, 1),
+  link-color-hover: color-bg-active,
+  //
+  scrollbar-fg: rgba(255, 255, 255, 0.247),
+  scrollbar-bg: layout-bg,
+  //
+  header-bg: linear-gradient(-180deg, #4b4b4b 1%, #3d3d3d 97%),
+  //
+  footer-bg: header-bg,
+  //
+  menu-submenu-bg: rgba(40, 40, 40, 1),
+  menu-submenu-active-bg: rgba(255, 255, 255, 0.098),
+  menu-submenu-active-border-color: none,
+  menu-submenu-active-shadow: shadow,
+  //
+  smart-table-header-bg:color-bg-active,
+  smart-table-bg-even: menu-submenu-bg,
+  smart-table-bg-active:color-bg-active,
+  smart-table-paging-hover:color-bg-active,
+  smart-table-paging-bg-active: menu-submenu-bg,
+  //
+  btn-hero-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5),
+  btn-hero-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3),
+  //
+  form-control-bg: layout-bg,
+  form-control-focus-bg: layout-bg,
+  form-control-border-color: layout-bg,
+  form-control-selected-border-color: rgba(26, 169, 255, 0.298),
+  form-control-placeholder-color: scrollbar-fg,
+  //
+  checkbox-bg: scrollbar-fg,
+  checkbox-border-color: none,
+  checkbox-disabled-bg: checkbox-bg,
+  checkbox-disabled-border-color: none,
+  //
+  radio-bg: checkbox-bg,
+  radio-border-color: none,
+  radio-disabled-bg: checkbox-bg,
+  radio-disabled-border-color: none,
+  //
+  radial-gradient: radial-gradient(circle at 50% 50%, #423f8c, #302c6e),
+  linear-gradient: linear-gradient(to right, #171749, #413789),
+  //
+  actions-fg: color-fg,
+  actions-bg: color-bg,
+  //
+  user-fg: color-bg,
+  user-bg: color-fg,
+  user-fg-highlight: color-fg-highlight,
+  //
+  popover-border: color-primary,
+  popover-shadow: shadow,
+  //
+  context-menu-active-bg: color-primary,
+  context-menu-border: color-primary,
+  //
+  footer-height: header-height,
+  //
+  sidebar-width: 16.25rem,
+  sidebar-width-compact: 3.45rem,
+  //
+  btn-hero-bevel-size: 0 3px 0 0,
+  btn-hero-glow-size: 0 2px 8px 0,
+  btn-hero-primary-glow-size: btn-hero-glow-size,
+  btn-hero-success-glow-size: btn-hero-glow-size,
+  btn-hero-warning-glow-size: btn-hero-glow-size,
+  btn-hero-info-glow-size: btn-hero-glow-size,
+  btn-hero-danger-glow-size: btn-hero-glow-size,
+  btn-hero-secondary-glow-size: btn-hero-glow-size,
+  btn-secondary-border: color-primary,
+  btn-outline-fg: color-fg-heading,
+  btn-outline-hover-fg: color-fg-heading,
+  btn-outline-focus-fg: color-fg-heading,
+  btn-group-bg: #373273,
+  btn-group-separator: #312c66,
+  //
+  search-bg: linear-gradient(to right, #171749, #413789),
+  //
+  badge-fg-text: color-white,
+  badge-primary-bg-color: color-primary,
+  badge-success-bg-color: color-success,
+  badge-info-bg-color: color-info,
+  badge-warning-bg-color: color-warning,
+  badge-danger-bg-color: color-danger,
+  //
+  spinner-bg: rgba(61, 55, 128, 0.9),
+  stepper-accent-color: color-success,
+  //
+  tabs-selected-second-color: color-success,
+  tabs-selected-degrees: 20deg,
+  //
+  calendar-active-item-bg: color-primary,
+  calendar-selected-item-bg: color-primary,
+  calendar-range-bg-in-range: #4e4095,
+  calendar-today-item-bg: #352f6e,
+  //
+  select-option-disabled-bg: #312e75,
+  //
+  toastr-color-fg: color-white,
+  toastr-padding: 1.25rem,
+  toastr-border: 0,
+  toastr-default-background: #bcc3cc,
+  //
+  tooltip-fg: color-bg,
+  tooltip-status-fg: color-white,
+  //
+  datepicker-border: color-primary,
+  datepicker-shadow: shadow,
+);
+
+$nb-themes: nb-register-theme($theme, dark, default);
