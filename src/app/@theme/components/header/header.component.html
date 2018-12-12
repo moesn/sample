@@ -1,5 +1,15 @@
 <div class="header-container left">
   <div class="logo-containter">
-    <div class="logo" (click)="goToHome()">配置中心</div>
+    <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
+    <div class="logo" (click)="goToHome()">Ngx-<span>Sample</span></div>
   </div>
+  <ngx-theme-switcher></ngx-theme-switcher>
+</div>
+
+<div class="header-container left">
+  <nb-actions size="medium">
+    <nb-action *nbIsGranted="['view', 'user']" >
+      <nb-user [nbContextMenu]="userMenu" [name]="user?.name" [picture]="user?.picture"></nb-user>
+    </nb-action>
+  </nb-actions>
 </div>

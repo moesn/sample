@@ -2,19 +2,20 @@ import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 import { takeWhile } from 'rxjs/operators';
 
+// TODO: move layouts into the framework
 @Component({
-  selector: 'zkwl-one-column-layout',
+  selector: 'ngx-one-column-layout',
   styleUrls: ['./one-column.layout.scss'],
   template: `
     <nb-layout>
       <nb-layout-header fixed>
-        <zkwl-header></zkwl-header>
+        <ngx-header></ngx-header>
       </nb-layout-header>
 
       <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive>
         <nb-sidebar-header>
           <a href="#" class="btn btn-hero-success main-btn">
-            <i class="ion ion-social-github"></i> <span>Dashboard</span>
+            <i class="ion ion-social-github"></i> <span>Support Us</span>
           </a>
         </nb-sidebar-header>
         <ng-content select="nb-menu"></ng-content>
@@ -25,10 +26,10 @@ import { takeWhile } from 'rxjs/operators';
       </nb-layout-column>
 
       <nb-layout-footer fixed>
-        <zkwl-footer></zkwl-footer>
+        <ngx-footer></ngx-footer>
       </nb-layout-footer>
     </nb-layout>
-  `
+  `,
 })
 export class OneColumnLayoutComponent implements OnDestroy {
 

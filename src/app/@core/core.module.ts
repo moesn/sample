@@ -4,14 +4,19 @@ import { NbAuthModule, NbDummyAuthStrategy } from '@nebular/auth';
 import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
 import { of as observableOf } from 'rxjs';
 
+import { throwIfAlreadyLoaded } from './module-import-guard';
+import { DataModule } from './data/data.module';
+import { AnalyticsService } from './utils/analytics.service';
 
 export class NbSimpleRoleProvider extends NbRoleProvider {
   getRole() {
+    // here you could provide any role based on any auth flow
     return observableOf('guest');
   }
 }
 
 export const NB_CORE_PROVIDERS = [
+  ...DataModule.forRoot().providers,
   ...NbAuthModule.forRoot({
 
     strategies: [
@@ -40,7 +45,8 @@ export const NB_CORE_PROVIDERS = [
 
   {
     provide: NbRoleProvider, useClass: NbSimpleRoleProvider
-  }
+  },
+  AnalyticsService
 ];
 
 @NgModule({
@@ -54,6 +60,7 @@ export const NB_CORE_PROVIDERS = [
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+    throwIfAlreadyLoaded(parentModule, 'CoreModule');
   }
 
   static forRoot(): ModuleWithProviders {

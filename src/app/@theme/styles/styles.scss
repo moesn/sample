@@ -22,10 +22,10 @@
   @include nb-bootstrap-global();
 
   // loading progress bar
-  @include pace-theme();
+  @include ngx-pace-theme();
 
   // fixed in rc.9 and can be removed after upgrade
   .custom-control .custom-control-indicator {
-    border-radius: 50%;
+    border-radius: 50%; // TODO: quickfix for https://github.com/akveo/nebular/issues/275
   }
 };
