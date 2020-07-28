@@ -26,7 +26,7 @@
     "@nebular/bootstrap": "3.0.0",
     "@nebular/security": "3.0.0",
     "@nebular/theme": "3.0.0",
-    "bootstrap": "4.0.0",
+    "bootstrap": "4.5.0",
     "nebular-icons": "1.1.0",
     "rxjs": "6.3.0",
     "zone.js": "^0.8.26"
